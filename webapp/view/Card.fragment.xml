@@ -1,0 +1,25 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:f="sap.f"
+	xmlns:card="sap.f.cards">
+	<Popover id="_IDGenPopover1" placement="Right" showHeader="false" contentWidth="302px">
+			<f:Card id="_IDGenCard1" width="100%">
+				<f:header>
+					<card:NumericHeader id="_IDGenNumericHeader1"
+						title="Sales Revenue"
+						subtitle="Sales revenue in the current quarter"
+						unitOfMeasurement="EUR"
+						number="2.16"
+						scale="M"
+						trend="{= ${screen>/valueStatus} > 1 ? 'Up' : 'Down'}"
+						state="{= ${screen>/valueStatus} > 1 ? 'Good' : 'Error'}">
+						<card:sideIndicators>
+							<card:NumericSideIndicator id="_IDGenNumericSideIndicator1" number="4.74" unit="M" title="Target" />
+							<card:NumericSideIndicator id="_IDGenNumericSideIndicator2" number="{= ${screen>/valueStatus} > 1 ? '+' : '-'}54.49" unit="%" title="Deviation" />
+						</card:sideIndicators>
+					</card:NumericHeader>
+				</f:header>
+			</f:Card>
+	</Popover>
+</core:FragmentDefinition>
